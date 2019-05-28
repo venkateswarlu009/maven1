@@ -1,4 +1,4 @@
-FROM tomcat:8
+FROM tomcat:7
 # Take the war and copy to webapps of tomcatserver
 COPY myweb.war /usr/local/tomcat/webapps/
 COPY manager.xml /usr/local/tomcat/conf/Catalina/localhost

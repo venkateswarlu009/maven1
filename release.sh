@@ -12,7 +12,7 @@ masterBranch=master
 releaseBranch=RELEASE/$versionLabel
 
 #navigating into halIos
-cd halIos
+cd maven1
 
 #getting the current branch
 branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
@@ -31,7 +31,7 @@ echo $(git branch | grep \* | cut -d ' ' -f2)
 #git checkout $releaseBranch
 #echo $(git branch | grep \* | cut -d ' ' -f2)
 # file in which to update version number
-cd HAL-iOS/
+cd maven1/
 versionFile="Info.plist"
 
 # find version number assignment ("= 19.06" for example)

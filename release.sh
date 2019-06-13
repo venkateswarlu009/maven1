@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #cloning the remote repo of halIos
-git clone https://code.devops.fds.com/stores/halIos.git
+git clone https://github.com/venkateswarlu009/maven1.git
 
 # 1.0.0, 1.5.2, etc.
 versionLabel=$1

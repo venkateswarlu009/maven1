@@ -7,7 +7,7 @@ git clone https://github.com/venkateswarlu009/maven1.git
 versionLabel=$1
 
 # establish branch
-devBranch=DEV
+devBranch=venki
 masterBranch=master
 releaseBranch=RELEASE/$versionLabel
 
@@ -48,7 +48,7 @@ rm $versionFile.backup
 #Updating Dev branch with new version change.
 #cd halIos
 echo $(git commit -am "[ci-skip] pushing new versions back to git")
-git checkout DEV
+git checkout venki
 
 # find version number assignment ("= 1.5.5" for example)
 # and replace it with newly specified version number

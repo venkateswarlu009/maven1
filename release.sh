@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #cloning the remote repo of halIos
-git clone https://code.devops.fds.com/stores/halIos.git
+git clone https://github.com/venkateswarlu009/maven1.git
 
 # 1.0.0, 1.5.2, etc.
 versionLabel=$1
@@ -12,7 +12,7 @@ masterBranch=master
 releaseBranch=RELEASE/$versionLabel
 
 #navigating into halIos
-cd halIos
+cd maven1
 
 #getting the current branch
 branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
@@ -22,9 +22,9 @@ echo $branch
 #merging dev branch into master
 git checkout master
 git merge devBranch
-
+git merge -m "latest"
 # file in which to update version number
-cd HAL-iOS/
+#cd HAL-iOS/
 versionFile="Info.plist"
  
 
@@ -47,7 +47,7 @@ echo $(git commit -am "[ci-skip] pushing new versions back to git")
 
 
 #Updating Dev branch with new version change.
-cd halIos
+cd maven1
 git add .
 git commit -m "ci-skip"
 git checkout DEV

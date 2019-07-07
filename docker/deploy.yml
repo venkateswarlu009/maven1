@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+          name: mft-file-upload
+            annotations:
+                        nginx.ingress.kubernetes.io/ssl-redirect: "false"
+                        spec:
+                                  tls:
+                                            - hosts:
+                                                        - dev-ivs-mft-file-upload.devops.fds.com
+                                                              secretName: nginxsecret
+                                                                rules:
+                                                                          - host: dev-ivs-mft-file-upload.devops.fds.com
+                                                                                http:
+                                                                                              paths:
+                                                                                                            - path: /
+                                                                                                                      backend:
+                                                                                                                                        serviceName: mft-file-upload
+                                                                                                                                                  servicePort: 80
+
